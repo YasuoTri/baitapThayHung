@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Button, Table, Container, Alert } from 'react-bootstrap';
-import UserForm from './components/UserForm';
-import DeleteModal from './components/DeleteModal';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Button, Table, Container, Alert } from "react-bootstrap";
+import UserForm from "./components/UserForm";
+import DeleteModal from "./components/DeleteModal";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const API_URL = 'https://67da316335c87309f52b5619.mockapi.io/api/users';
+const API_URL = "https://67da316335c87309f52b5619.mockapi.io/api/users";
 
 function App() {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [showForm, setShowForm] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   // Fetch users từ API
   const fetchUsers = async () => {
@@ -20,7 +20,7 @@ function App() {
       const res = await axios.get(API_URL);
       setUsers(res.data);
     } catch (err) {
-      setError('Không thể tải dữ liệu người dùng');
+      setError("Không thể tải dữ liệu người dùng");
     }
   };
 
@@ -35,7 +35,7 @@ function App() {
       fetchUsers();
       setShowDeleteModal(false);
     } catch (err) {
-      setError('Xóa thất bại');
+      setError("Xóa thất bại");
     }
   };
 
@@ -52,8 +52,8 @@ function App() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Tên</th>
             <th>MSSV</th>
+            <th>Tên</th>
             <th>Hành động</th>
           </tr>
         </thead>

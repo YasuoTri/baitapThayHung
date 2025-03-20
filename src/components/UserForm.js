@@ -31,7 +31,7 @@ const UserForm = ({ show, onHide, user, fetchUsers, apiUrl }) => {
       <Modal.Body>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
-            <Form.Label>Tên</Form.Label>
+            <Form.Label>MSSV</Form.Label>
             <Form.Control
               type="text"
               value={formData.name}
@@ -42,7 +42,7 @@ const UserForm = ({ show, onHide, user, fetchUsers, apiUrl }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label>Mssv</Form.Label>
+            <Form.Label>Tên</Form.Label>
             <Form.Control
               type="mssv"
               value={formData.mssv}
