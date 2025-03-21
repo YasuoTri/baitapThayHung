@@ -54,6 +54,8 @@ function App() {
             <th>ID</th>
             <th>MSSV</th>
             <th>Tên</th>
+            <th>Hình ảnh</th>
+            <th>Lớp</th>
             <th>Hành động</th>
           </tr>
         </thead>
@@ -61,8 +63,18 @@ function App() {
           {users.map((user) => (
             <tr key={user.id}>
               <td>{user.id}</td>
-              <td>{user.name}</td>
               <td>{user.mssv}</td>
+              <td>{user.hoten}</td>
+              <td>
+                <img
+                  src={user.hinhanh}
+                  alt="User Avatar"
+                  width="50"
+                  height="50"
+                />
+              </td>
+
+              <td>{user.lop}</td>
               <td>
                 <Button
                   variant="warning"
